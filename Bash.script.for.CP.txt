@@ -1,0 +1,10 @@
+net accounts /minpwlen:10
+net accounts /minpwage:1
+net accounts /maxpwage:60
+net accounts /accountlockoutduration:30
+net accounts /accountlockoutthreshhold:10
+net accounts /enforcepasswordhistory:24
+
+net stop remoteregistry
+net stop remotedesktopprotocol
+net stop
