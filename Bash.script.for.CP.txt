@@ -15,3 +15,10 @@ stop-service FTPSVC
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
 
 Start-MpScan -ScanType QuickScan
+
+Set-Service -Name remoteregistry -Status stopped -StartupType disabled
+Set-Service -Name SSDPSRV -Status stopped -StartupType disabled
+Set-Service -Name TermService -Status stopped -StartupType disabled
+Set-Service -Name UmRdpService -Status stopped -StartupType disabled
+Set-Service -Name upnhost -Status stopped -StartupType disabled
+Set-Service -Name FTPSVC -Status stopped -StartupType disabled
