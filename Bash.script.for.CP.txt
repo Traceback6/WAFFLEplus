@@ -13,3 +13,5 @@ stop-service upnphost
 stop-service FTPSVC
 
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
+
+Start-MpScan -ScanType QuickScan
