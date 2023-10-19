@@ -1,10 +1,15 @@
 net accounts /minpwlen:10
 net accounts /minpwage:1
 net accounts /maxpwage:60
-net accounts /accountlockoutduration:30
-net accounts /accountlockoutthreshhold:10
-net accounts /enforcepasswordhistory:24
+net accounts /lockoutduration:30
+net accounts /lockoutthreshold:10
+net accounts /uniquepw:24
 
-net stop remoteregistry
-net stop remotedesktopprotocol
-net stop
+stop-service remoteregistry
+stop-service SSDPSRV
+stop-service TermService
+stop-service UmRdpService
+stop-service upnphost
+stop-service FTPSVC
+
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
