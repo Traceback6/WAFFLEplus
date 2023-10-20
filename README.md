@@ -3,7 +3,7 @@
 ### Files:
 
 | File | Added by | Desc. |
-|------|----------|-------|
+| :-----| :---------| :------|
 | Bash.script.for.CP.txt| NotMaxwell | Runs on windows, no known bugs. |
 | Linux CyberPatriot Checklist.pdf | Unknown | Should have all of the to-do items for Linux. |
 | Windows CyberPatriot Checklist.txt | Unknown | Should have all of the to-do items for Windows. |
@@ -16,7 +16,7 @@
 ### Members:
 
 | Username | Name | Jobs |
-|----------|------|--------|
+| :---------| :-----| :-------|
 | Justintimefordinner | Justin | Team Lead / Linux / PacketTracer |
 | jman5213 | Jordan | PacketTracer / Googler / Windows Server / Linux Scripter |
 | NotMaxwell | Maxwell | Windows / Bash Scripter |
