@@ -10,3 +10,17 @@
 | Waffl3.ps1 | Justintimefordinner | Bash script, unkown usage. |
 
 \**All checklists should be in the shared Google Drive on your school account.*
+
+
+### Members:
+
+| Username | Name | Jobs |
+|----------|------|--------|
+| Justintimefordinner | Justin | Team Lead / Linux / PacketTracer |
+| jman5213 | Jordan | PacketTracer / Googler / Windows Server / Linux Scripter |
+| NotMaxwell | Maxwell | Windows / Bash Scripter |
+| aidantheunnammed | Aidan | CyberPatriot Notebook / Windows |
+| SavageCabbage39 | Ty | Checklister / Windows Server |
+| zumlar | Gideon | Linux / Linux Scripter / Googler / PacketTracer |
+
+\**Feel free to update any infomation here if I got it wrong.*
