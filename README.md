@@ -8,7 +8,7 @@
 | Linux CyberPatriot Checklist.pdf | Unknown | Should have all of the to-do items for Linux. |
 | Windows CyberPatriot Checklist.txt | Unknown | Should have all of the to-do items for Windows. |
 | Waffl3.ps1 | Justintimefordinner | Bash script, unkown usage. |
-| LinuxScript.py | jman5213 | Python sctipt, mostly incomplete. Can be updated [here.](https://replit.com/join/fbzrymvbux-jman5213) |
+| LinuxScript.py | jman5213 | Python sctipt, mostly incomplete. Can be edited [here.](https://replit.com/join/fbzrymvbux-jman5213) |
 
 \**All checklists should be in the shared Google Drive on your school account.*
 
