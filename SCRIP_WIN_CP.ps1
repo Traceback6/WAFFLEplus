@@ -36,20 +36,15 @@ auditpol /set /category:"System" /success:enable /failure:enable
 
 Set-ExecutionPolicy RemoteSigned
 
-
-
-
-
-Start-MpScan -ScanType QuickScan
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name DisableCAD -Value 0
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Conrtol\Terminal server" /v fDenyTSConnections /t REG_DWORD /d 1 /f
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DisableCAD" /t REG_DWORD /d 0 /f
 
-# Set SmartScreen to Block
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" -Name "EnableSmartScreen" -Value 2 -PropertyType DWORD -Force
 
-# Force Group Policy Update
 gpupdate /force
 
 Disable-localuser Guest
 Disable-localuser Administrator
+
+Start-MpScan -ScanType QuickScan
