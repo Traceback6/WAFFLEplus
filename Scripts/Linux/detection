@@ -1,0 +1,12 @@
+''' 
+1. check if ssh enabled
+2. check min pass length
+3. check pass age
+4. check is wireshark intalled
+5. check latest versions of system and software
+6. check guest dissabled
+7. check # of users
+8. check # of admins
+9. check for forbidden files mp3/4 txt etc.
+10. 
+ '''
