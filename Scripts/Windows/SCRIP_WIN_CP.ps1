@@ -34,6 +34,10 @@ auditpol /set /category:"Privilege Use" /success:enable /failure:enable
 auditpol /set /category:"Object Access" /success:enable /failure:enable
 auditpol /set /category:"System" /success:enable /failure:enable
 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+choco install malwarebytes -y
+
 Set-ExecutionPolicy RemoteSigned
 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name DisableCAD -Value 0
