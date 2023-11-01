@@ -24,7 +24,3 @@ args = parser.parse_args()
 
 
 print(parser())
-
-
-git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
