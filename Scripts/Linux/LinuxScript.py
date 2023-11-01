@@ -4,8 +4,24 @@ import shlex
 
 
 class Tools:
+    
+    
+    
     def __init__(self) -> None:
-        pass
+        wd = subprocess.check_output("pwd")
+        for s in wd:
+            if s == "/":
+                subprocess.run("cd", "..")
+        
+        global psp
+        distro = subprocess.check_output("lsb_release", "-a")
+        if distro == "ubuntu":  # not actually correct but is placeholder
+            # password path
+            psp = "/etc/pam.d/common-password"
+        """        
+        elif distro == "debian":
+            stuff
+        """
 
     def execute(cmd):
         cmd = cmd.strip()
@@ -20,6 +36,7 @@ class Tools:
             check_command, shell=True, capture_output=True, text=True
         )
         check_result = check_process.stdout.strip()
+        # this try/except block doesn't account for errors in the shell
         try:
             if check_result == "exists":
                 command = f"sudo sed -i 's/\\bminlen=[0-9]\\+\\b/minlen={length}/' /etc/pam.d/common-password"
@@ -101,6 +118,8 @@ class Tools:
         10
     )  # code in theory works, but when tested didn't edit the settings file
     # to get to the file, go to /etc/pam.d/common-password
+    
+    #note to Jordan, it's because the first thing the script should do is go to the root folder -Justin
     print("password lenght changed to 10")
     """change_password_age(7)
     print("password age changed to 7")"""
