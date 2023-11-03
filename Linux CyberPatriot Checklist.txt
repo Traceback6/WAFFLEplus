@@ -8,7 +8,7 @@
 * Fix permissions
 * Delete hacking tools (like wireshark)
 * Set password requirements. (check below for detail)
-* Install and Enable gufw (Terminal> “sudo apt install gufw”> type “gufw” and make status=ON and Incoming=Reject)
+* Install and Enable gufw (Terminal> “sudo apt install ufw”> type “ufw” and make status=ON and Incoming=Reject)
 * Update software (Terminal> “sudo apt-update” > “sudo apt-upgrade”)
 * Change insecure password
 
