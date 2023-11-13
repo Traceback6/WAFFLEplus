@@ -38,12 +38,12 @@ Competition Checklist:
    * Remote Desktop
    * WWW Publishing Service
 * Deny the Following Ports in Control Panel. (Control Panel > System and Security > Windows Firewall > Advanced Settings > Inbound Rules or Outbound Rules > New Rule > Port > Next > TCP or UDP > Specific Local Ports > enter port number “like 80, 443, 20, etc.) > Next > Block the Connection > Next > Choose network location/s either public, domain, or private > Next > create a name > Finish)
-   * RDP
-   * SSH
-   * TelNet
-   * SNMP
-   * LDAP
-   * FTP
+   * RDP - 3389
+   * SSH - 22
+   * TelNet - 23
+   * SNMP - 161/162
+   * LDAP - 389
+   * FTP - 21 (command)/20 (data)
 * Enable security features in Windows Security. (Settings > Update and Security > Windows Security > Protection Areas, enable as many as possible)
 * Run a quick scan on the machine with either Malware Removal Tool (Malwarebytes) or Windows Security. (either win+r > mrt > Quick Scan or Settings > Update and Security > Windows Security > Quick Scan)
 * Password security (win+r > gpedit.msc > Account Policy > Password Policy) OR
@@ -103,7 +103,3 @@ Removing Malware (You will probably only need step 1)
    *Process Monitor(Gives detailed info about file system, registry, and thread activity)(https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)
    *TCPView(lists all programs on the computer that are connected to a remote computer)(https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)
 
-
-
-Notes:
-idk lol
