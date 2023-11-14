@@ -33,6 +33,7 @@ Auditpol /set /category:"DS Access" /success:enable /failure:enable
 auditpol /set /category:"Privilege Use" /success:enable /failure:enable
 auditpol /set /category:"Object Access" /success:enable /failure:enable
 auditpol /set /category:"System" /success:enable /failure:enable
+auditpol /get /category*
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
