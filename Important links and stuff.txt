@@ -1,4 +1,4 @@
-﻿* Center for Internet Security - Provides numerous resources on Internet security and creates cybersecurity standards
+* Center for Internet Security - Provides numerous resources on Internet security and creates cybersecurity standards
 * CNET - Offers the latest cybersecurity news and offers thoousands of open-source software programs for download
 * Mandiant- Provides up-to-date information on the most dangerous threats in cyberspace
 * Ninite - Hosts a program that can quickly update all of your software at once
@@ -9,9 +9,10 @@
 * SuperUser​​ - Uses the knowledge of computer experts around the world to answer cybersecurity questions
 * TechRepublic - Contains a wide range of resources for technical professionals​
 * ​CyberSecurityEducation.org - Free collection of cyberseurity education and career resources
+* Meld(http://meldmerge.org/)-  a visually based diffing and merging tool for files and directories that works on both Linux and Windows. 
 
 
-
+https://akshayrohatgi.com/blog/posts/How-To-Win-CyberPatriot/
 
 http://technet.microsoft.com/en-us/library/default.aspx 
 
@@ -26,3 +27,6 @@ http://www.windowsnetworking.com/
 
 
 http://technet.microsoft.com/en-us/sysinternals/bb545021.aspx
+
+https://www.youtube.com/playlist?list=PLcn9NsWbb8s4wQrX0Qi5G4kRifQHxCV9-
+
