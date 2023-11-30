@@ -1,0 +1,100 @@
+﻿PRIORITY
+* Open README
+* Solve Forensics
+* Secure root (terminal > "sudo gedit /etc/ssh/sshd_config" > set PermitRootLogin to "no")
+* enable/disable ssh (depending on read me)(install openssh-service to enable/ “systemctl stop ssh” then “systemctl disable ssh” to disable)
+* Check for daily updates in Software and Updates (Ubuntu specific)
+* Remove/Change user accounts/admin privileges
+* Fix permissions
+* Delete hacking tools (like wireshark)
+* Set password requirements. (check below for detail)
+* Install and Enable gufw (Terminal> “sudo apt install ufw”> type “ufw” and make status=ON and Incoming=Reject)
+* Update software (Terminal> “sudo apt-update” > “sudo apt-upgrade”)
+* Change insecure password
+
+
+
+Security tools to install (“sudo apt install [PROGRAM NAME]”)
+* Clamav (open it with “clamscan” after install)(virus removal tool)
+* Gufw(firewall)
+* Openssh-server(ssh service)
+* libpam-cracklib(creates better password policies)
+* Bum (Boot Up Manager) (Use “sudo bum” to run)
+
+
+Looking for media files and hacking tools
+* Before manually checking for files, cd into the "/home" directory and run "sudo ls -Ra *"
+* Use “ls -la” to also view hidden files
+* To search for files use “locate *[filetype]”
+   * .mp3
+   * .mp4
+   * .jpg (careful with these as some may be important)
+   * .avi
+   * .wav
+   * .midi
+   * .bmp
+   * .gif
+   * .jpeg
+   * .pdf
+   * A TEXT FILE CONTAINING ALL THE USER PASSWORDS
+* “rm [PathToFile]”
+
+
+For solving forensics
+* If you need to find a user ID in terminal > "id -u <username>"
+* Custom script wip
+
+
+For password requirements
+        Pam.d
+1. MAKE SURE libpam-cracklib IS INSTALLED!!!!
+2. Through terminal (“cd etc/pam.d/”)
+3. “Sudo gedit common-password”
+4. Find the line that says “pam_unix.so” and add “remember=5”
+5. Find the line that says “pam_cracklib.so” and add “ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1” (Enforces password complexity)
+
+
+1. Through terminal (“sudo gedit /etc/pam.d/common-auth”)
+2. At the end of the file add “auth required pam_tally2.so deny=5 onerr=fail unlock_time=1800” (Sets the allowed failed login attempts to 5)
+
+
+        Login.defs
+1. Go to terminal (“sudo gedit /etc/login.defs”)
+2. Set “PASS_MAX_DAYS” to “90”
+3. Set “PASS_MIN_DAYS” to “10”
+4. Set “PASS_WARN_AGE” to “7”
+
+
+ports stuff
+        1. Use "sudo ss -ln" to display all ports
+        2. Look into any port that doesn't have "127.0.0.1" if the readme doesn't specify it (still make sure you know what you're doing)
+        3. To close a port use "sudo lsof -i :$port"
+
+
+Networking stuff (more advanced. Don't worry about these until later rounds.)
+        * Enable syn cookie protection ("systemctl -n net.ipv4.tcp_syncookies")
+        * Disable IPv6 (Potentially harmful! Only under certain conditions.) ("echo "net.ipv6.conf.all.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf")
+        * Disable IP Forwarding ("echo 0 | sudo tee /proc/sys/net/ipv4/ip_forward")
+        * Prevent IP Spoofing ("echo "nospoof on" | sudo tee -a /etc/host.conf")
+
+SUS Users(AMONGUSAMONGUSAMONGUSAMONGUSAMONGUSAMONGUS)
+        In terminal run ("cat /etc/passwd") and look for people that are:
+                * uid 0
+                * can login
+                * Are allowed in the readme (CPDiscord told me about this one)
+        
+        Find fake admins/roots 
+                * go to "/etc/sudoers.d" and make sure only authorized people can sudo
+                * go to "/etc/group" and remove any non-admins from sudo and admin groups
+
+
+
+Disable guest accounts
+1. Go to terminal (“sudo gedit /etc/lightdm/lightdm.conf”)(might be “users.conf”)
+2. Add the line “allow-guest=false” at the bottom of the file
+
+
+Tools and extras:
+* http://whois.domaintools.com/
+* https://wiki.ubuntu.com/Security/features
+* Check service configuration files for required services. Sometimes can get a point for finding a wrong setting in a config file for sql, apache, etc.
