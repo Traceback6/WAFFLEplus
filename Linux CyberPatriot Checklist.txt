@@ -16,7 +16,7 @@
 
 Security tools to install (“sudo apt install [PROGRAM NAME]”)
 * Clamav (open it with “clamscan” after install)(virus removal tool)
-* Gufw(firewall)
+* ufw(firewall)
 * Openssh-server(ssh service)
 * libpam-cracklib(creates better password policies)
 * Bum (Boot Up Manager) (Use “sudo bum” to run)
