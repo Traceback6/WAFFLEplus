@@ -1,0 +1,5 @@
+﻿sudo usermod -a -G examplegroup exampleusername
+
+
+sudo apt-get install
+sudo ufw enable
