@@ -1,0 +1,4 @@
+apt-get, systemctl, 
+update, ,
+upgrade, ,
+autoremove, ,
