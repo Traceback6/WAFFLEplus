@@ -13,8 +13,8 @@ run(["sudo", "apt", "autoremove"])
 #Install Security tools
 run(["sudo", "apt-get", "ufw"])
 run(["sudo", "enable", "ufw"])
-run(["sudo", "apt-get", "Clamav"])
-run(["sudo", "apt-get", "Openssh-server"])
+run(["sudo", "apt-get", "clamav"])
+run(["sudo", "apt-get", "openssh-server"])
 run(["sudo", "apt-get", "libpam-cracklib"])
 run(["sudo", "apt-get", "bum"])
 #disable ctrl+alt+delete
@@ -40,18 +40,3 @@ if (sshEnable == "yes" or sshEnable == "Yes"):
     run(["sudo", "systemctl", "start", "ssh"])
 #change minimum password age
 #change min password length
-check_command = "grep -q 'minlen=' /etc/pam.d/common-password && echo 'exists' || echo 'not exists'"
-check_process = subprocess.run(check_command, shell=True, capture_output=True, text=True)
-check_result = check_process.stdout.strip()
-
-try:
-    if check_result == 'exists':
-        command = f"sudo sed -i 's/\\bminlen=[0-9]\\+\\b/minlen={length}/' /etc/pam.d/common-password"
-    else:
-        command = f"sudo sed -i '/pam_unix.so/ s/$/ minlen={length}/' /etc/pam.d/common-password"
-        subprocess.run(command, shell=True, check=True)
-        print(f"Minimum password length changed to {length}")
-
-except subprocess.CalledProcessError:
-    print("Failed to change minimum password length")
-
