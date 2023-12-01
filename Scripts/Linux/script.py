@@ -1,6 +1,6 @@
 #script
 
-import subprocess 
+from subprocess import run
 #disable guest
 run(["sudo", "usermod", "--expiredate", "1", "guest"])
 
