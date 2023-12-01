@@ -45,13 +45,13 @@ check_process = subprocess.run(check_command, shell=True, capture_output=True, t
 check_result = check_process.stdout.strip()
 
 try:
-if check_result == 'exists':
-    command = f"sudo sed -i 's/\\bminlen=[0-9]\\+\\b/minlen={length}/' /etc/pam.d/common-password"
-else:
-    command = f"sudo sed -i '/pam_unix.so/ s/$/ minlen={length}/' /etc/pam.d/common-password"
-    subprocess.run(command, shell=True, check=True)
-    print(f"Minimum password length changed to {length}")
+    if check_result == 'exists':
+        command = f"sudo sed -i 's/\\bminlen=[0-9]\\+\\b/minlen={length}/' /etc/pam.d/common-password"
+    else:
+        command = f"sudo sed -i '/pam_unix.so/ s/$/ minlen={length}/' /etc/pam.d/common-password"
+        subprocess.run(command, shell=True, check=True)
+        print(f"Minimum password length changed to {length}")
 
 except subprocess.CalledProcessError:
-print("Failed to change minimum password length")
+    print("Failed to change minimum password length")
 
