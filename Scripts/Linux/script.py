@@ -13,10 +13,12 @@ run(["sudo", "apt", "autoremove"])
 #Install Security tools
 run(["sudo", "apt-get", "ufw"])
 run(["sudo", "enable", "ufw"])
-run(["sudo", "apt-get", "clamav"])
-run(["sudo", "apt-get", "openssh-server"])
-run(["sudo", "apt-get", "libpam-cracklib"])
-run(["sudo", "apt-get", "bum"])
+run(["sudo", "apt", "update", "&&", "sudo", "apt", "Upgrade", "-y"])
+run(["sudo", "apt-get", "install", "openssh-server"])
+run(["sudo", "apt-get", "update", "-y"])
+run(["sudo", "apt-get", "install", "-y", "libpam-cracklib"])
+run(["sudo", "apt-get", "update", "-y"])
+run(["sudo", "apt-get", "install", "y-", "bum"])
 #disable ctrl+alt+delete
 run(["sudo", "sed", "-i", "/^exec uim-systray/a Exec=/bin/false", "/etc/lightdm/lightdm.conf",])
 
