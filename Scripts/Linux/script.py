@@ -21,8 +21,6 @@ run(["sudo", "apt-get", "install", "y-", "bum"])
 run(["sudo", "sed", "-i", "/^exec uim-systray/a Exec=/bin/false", "/etc/lightdm/lightdm.conf",])
 
 # Password complexity requirement.
-run(["sudo", "sed", "-i", f"s/^PASS_COMPLEXITY.*/PASS_COMPLEXITY {complexity}/", "/etc/login.defs"])
-
 #remove wireshark if its installed (User is responsible for figuring out if wireshark exists.)
 WireRemove = input("Does wireshark exist and need to be deleted?: ")
 if (WireRemove == "yes" or WireRemove == "Yes"):
