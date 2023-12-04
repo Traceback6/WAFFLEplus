@@ -16,8 +16,6 @@ run(["sudo", "enable", "ufw"])
 run(["sudo", "apt", "update", "&&", "sudo", "apt", "Upgrade", "-y"])
 run(["sudo", "apt-get", "install", "openssh-server"])
 run(["sudo", "apt-get", "update", "-y"])
-run(["sudo", "apt-get", "install", "-y", "libpam-cracklib"])
-run(["sudo", "apt-get", "update", "-y"])
 run(["sudo", "apt-get", "install", "y-", "bum"])
 #disable ctrl+alt+delete
 run(["sudo", "sed", "-i", "/^exec uim-systray/a Exec=/bin/false", "/etc/lightdm/lightdm.conf",])
