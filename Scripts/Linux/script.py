@@ -23,17 +23,17 @@ run(["sudo", "sed", "-i", "/^exec uim-systray/a Exec=/bin/false", "/etc/lightdm/
 # Password complexity requirement.
 #remove wireshark if its installed (User is responsible for figuring out if wireshark exists.)
 WireRemove = input("Does wireshark exist and need to be deleted?: ")
-if (WireRemove == "yes" or WireRemove == "Yes"):
+if (WireRemove == "y" or WireRemove == "Y"):
     run(["sudo", "apt-get", "remove", "--purge", "wireshark"])
     run(["sudo", "apt-get", "autoremove"])
 
 #update firefox
 FoxUpdate = input("Does FireFox need updated?: ")
-if (FoxUpdate == "yes" or FoxUpdate == "Yes"):
+if (FoxUpdate == "y" or FoxUpdate == "Y"):
     run(["sudo", "apt", "install", "firefox"])
 #enable SSH
 sshEnable = input("Does ssh need enabled?: ")
-if (sshEnable == "yes" or sshEnable == "Yes"):
+if (sshEnable == "y" or sshEnable == "Y"):
     run(["sudo", "systemctl", "enable", "ssh"])
     run(["sudo", "systemctl", "start", "ssh"])
 #change minimum password age
