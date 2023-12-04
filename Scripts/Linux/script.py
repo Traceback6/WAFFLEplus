@@ -1,6 +1,6 @@
 #script
 
-from subprocess import run
+from subprocess import run, Popen, PIPE, check_call
 #disable guest
 run(["sudo", "usermod", "--expiredate", "1", "guest"])
 
@@ -38,3 +38,12 @@ if (sshEnable == "y" or sshEnable == "Y"):
     run(["sudo", "systemctl", "start", "ssh"])
 #change minimum password age
 #change min password length
+
+#update insecure passwords
+usrPswdUpdt = input("Are there any users who need their password updated y/n")
+if (usrPswdUpdt == "y" or usrPswdUpdt == "Y"):
+    UsrCount = int(input(" how many users need their password changed? : "))
+    UsrNme = ""
+    newPswd = ""
+    for count in UsrCount:
+        
