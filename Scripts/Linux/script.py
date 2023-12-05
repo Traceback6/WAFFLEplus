@@ -40,9 +40,20 @@ if (sshEnable == "y" or sshEnable == "Y"):
 #change min password length
 
 #update insecure passwords
-usrPswdUpdt = input("Are there any users who need their password updated y/n")
+usrPswdUpdt = input("Are there any users who need their password updated y/n: ")
 if (usrPswdUpdt == "y" or usrPswdUpdt == "Y"):
     UsrCount = int(input(" how many users need their password changed? : "))
-    for count in range(1,UsrCount + 1):
+    for count in range(1 , UsrCount + 1):
         UsrNme = input("Who needs their password changed? Name is caps specific. :")
         run(["sudo", "passwd", UsrNme])
+#groups
+groups = input("do we need to make any groups? y/n:")
+if (groups = "y" or groups = "Y"):
+    newGroupName = input("What is the new groups name?: ")
+    newGroupQuan = input("How many people are in the group?: ")
+    run(["sudo", "groupadd", newGroupName])
+    for num in range(1 , newGroupQuan + 1):
+        newGroupMember = input("Who is being added to the group? Please enter one user at a time: ")
+        run(["sudo", "usermod", "-a", "-g", newGroupName, newGroupMember])
+
+groups = input("do you need to add anyone to a group that already exists? y/n: ")
