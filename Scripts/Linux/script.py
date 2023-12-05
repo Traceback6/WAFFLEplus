@@ -63,3 +63,10 @@ if (groups == "y" or groups == "Y"):
     for count in range(1 , int(groupnum) + 1):
         groupmem = input("Who is being added to the group? One user at a time.: ")
         run(["sudo", "usermod", "-a", "-g", groupname, groupmem])
+#delete users
+deluser = input("Are there any users who need to be removed from the computer? y/n: ")
+if (deluser == y or deluser =="Y"):
+    delusercount = int(input("How many users need deleted?: ")
+    for number in range(1 , delusercount + 1):
+        delusername = input("What is the name of the account being deleted? Use one name at a time.: ")
+        run(["sudo", "userdel", delusername])
