@@ -22,17 +22,17 @@ run(["sudo", "sed", "-i", "/^exec uim-systray/a Exec=/bin/false", "/etc/lightdm/
 
 # Password complexity requirement.
 #remove wireshark if its installed (User is responsible for figuring out if wireshark exists.)
-WireSharkRemove = input("Does wireshark exist and need to be deleted?: ")
+WireSharkRemove = input("Does wireshark exist and need to be deleted? y/n: ")
 if (WireSharkRemove == "y" or WireSharkRemove == "Y"):
     run(["sudo", "apt-get", "remove", "--purge", "wireshark"])
     run(["sudo", "apt-get", "autoremove"])
 
 #update firefox
-FoxUpdate = input("Does FireFox need updated?: ")
+FoxUpdate = input("Does FireFox need updated? y/n: ")
 if (FoxUpdate == "y" or FoxUpdate == "Y"):
     run(["sudo", "apt", "install", "firefox"])
 #enable SSH
-sshEnable = input("Does ssh need enabled?: ")
+sshEnable = input("Does ssh need enabled? y/n: ")
 if (sshEnable == "y" or sshEnable == "Y"):
     run(["sudo", "systemctl", "enable", "ssh"])
     run(["sudo", "systemctl", "start", "ssh"])
@@ -43,7 +43,6 @@ if (sshEnable == "y" or sshEnable == "Y"):
 usrPswdUpdt = input("Are there any users who need their password updated y/n")
 if (usrPswdUpdt == "y" or usrPswdUpdt == "Y"):
     UsrCount = int(input(" how many users need their password changed? : "))
-    UsrNme = ""
-    newPswd = ""
-    for count in UsrCount:
-        
+    for count in range(1,UsrCount + 1):
+        UsrNme = input("Who needs their password changed? Name is caps specific. :")
+        run(["sudo", "passwd", UsrNme])
