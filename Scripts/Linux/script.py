@@ -59,7 +59,7 @@ if (groups = "y" or groups = "Y"):
 groups = input("do you need to add anyone to a group that already exists? y/n: ")
 if (groups == "y" or groups == "Y"):
     groupname = input("What is the groups name?: ")
-    groupnum = input("How many people are being added?: )
+    groupnum = input("How many people are being added?: ")
     for count in range(1 , int(groupnum) + 1):
         groupmem = input("Who is being added to the group? One user at a time.: ")
         run(["sudo", "usermod", "-a", "-g", groupname, groupmem])
