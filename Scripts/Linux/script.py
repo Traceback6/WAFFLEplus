@@ -48,7 +48,7 @@ if (usrPswdUpdt == "y" or usrPswdUpdt == "Y"):
         run(["sudo", "passwd", UsrNme])
 #groups
 groups = input("do we need to make any groups? y/n:")
-if (groups = "y" or groups = "Y"):
+if (groups == "y" or groups == "Y"):
     newGroupName = input("What is the new groups name?: ")
     newGroupQuan = input("How many people are in the group?: ")
     run(["sudo", "groupadd", newGroupName])
