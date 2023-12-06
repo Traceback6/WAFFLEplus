@@ -70,3 +70,10 @@ if (deluser == y or deluser =="Y"):
     for number in range(1 , delusercount + 1):
         delusername = input("What is the name of the account being deleted? Use one name at a time.: ")
         run(["sudo", "userdel", delusername])
+#add new users
+useradd = input("do you need to add any users? y/n: ")
+if (useradd == "y" or useradd == "Y"):
+    newUserCount = int(input("How many users do you need to add?: ")
+    for all in range(1 , newUserCount + 1):
+        newUserName = input("What is the name of the new user?: ")
+        run(["sudo", "useradd", newUserName])
