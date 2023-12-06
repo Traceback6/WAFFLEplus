@@ -65,7 +65,7 @@ if (groups == "y" or groups == "Y"):
         run(["sudo", "usermod", "-a", "-g", groupname, groupmem])
 #delete users
 deluser = input("Are there any users who need to be removed from the computer? y/n: ")
-if (deluser == y or deluser =="Y"):
+if (deluser == "y" or deluser =="Y"):
     delusercount = int(input("How many users need deleted?: ")
     for number in range(1 , delusercount + 1):
         delusername = input("What is the name of the account being deleted? Use one name at a time.: ")
@@ -73,7 +73,7 @@ if (deluser == y or deluser =="Y"):
 #add new users
 useradd = input("do you need to add any users? y/n: ")
 if (useradd == "y" or useradd == "Y"):
-    newUserCount = int(input("How many users do you need to add?: ")
+    newUserCount = int(input("How many users do you need to add?: "))
     for all in range(1 , newUserCount + 1):
         newUserName = input("What is the name of the new user?: ")
         run(["sudo", "useradd", newUserName])
