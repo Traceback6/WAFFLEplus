@@ -1,4 +1,11 @@
-import defender_updates, firewall_config, audit_policies, password_policies, service_manaement, uac_settings, ctypes
+import audit_policies
+import ctypes
+import defender_updates
+import firewall_config
+import password_policies
+import service_manaement
+import uac_settings
+
 
 def is_admin():
     try:
@@ -7,6 +14,7 @@ def is_admin():
             print("No no! Run me as admin, its better that way")
     except:
         return False
+
 
 is_admin()
 

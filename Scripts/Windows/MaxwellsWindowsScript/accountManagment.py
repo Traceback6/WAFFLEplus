@@ -1,8 +1,9 @@
-import ctypes, sys
-import subprocess
-from getpass import getpass
+import ctypes
 import logging
+import subprocess
+import sys
 from datetime import datetime
+from getpass import getpass
 
 # Set up logging
 logging.basicConfig(filename='account-management.log', level=logging.INFO)
@@ -146,7 +147,7 @@ def disable_defualt_accounts():
 
 
 def login_times():
-    """Allows user to setup login restrictions for accounts"""
+    """Allows user to set up login restrictions for accounts"""
     username = input("Enter account name: ")
     days = input(f"Enter the days for {username} (ex M-F): ")
     times = input(f"Enter the times for the {username} (9am-5pm)")
@@ -221,7 +222,7 @@ if is_admin():
             else:
                 print("Please enter a valid choice (1-6)")
 
-            # Askes if the user want to change their choice
+            # Asks if the user want to change their choice
             switch_choice = input("Do you want to switch choice? (y/n) ")
             if switch_choice.lower() == "y":
                 if choice == 1 or choice == 2 or choice == 3:

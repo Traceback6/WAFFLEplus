@@ -26,5 +26,6 @@ def configure_audit_policies():
         except subprocess.CalledProcessError as e:
             print(f"Error executing {command}: {e}")
 
+
 if __name__ == "__main__":
     configure_audit_policies()

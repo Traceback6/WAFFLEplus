@@ -1,6 +1,7 @@
-import subprocess
 import os
 import shutil
+import subprocess
+
 
 def deleteDirectories(listA, listB):
     malwareList = ["Wireshark", "Npcap"]
@@ -11,6 +12,7 @@ def deleteDirectories(listA, listB):
     for dir in listB:
         if dir in malwareList:
             shutil.rmtree(f"C:/Program Files (x86)/{dir}")
+
 
 softwareListPF = os.listdir("C:/Program Files")
 softwareList86 = os.listdir("C:/Program Files (x86)")

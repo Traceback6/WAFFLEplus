@@ -1,5 +1,6 @@
 import subprocess
 
+
 def configure_password_policies():
     password_policies = [
         "net accounts /minpwlen:8",
@@ -13,6 +14,7 @@ def configure_password_policies():
     for policy in password_policies:
         subprocess.run(policy, shell=True, check=True)
         print(f"{policy} executed")
+
 
 if __name__ == "__main__":
     configure_password_policies()

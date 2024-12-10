@@ -2,19 +2,21 @@ import os
 import shutil
 
 # File types to delete
-fileTypes = [".jpg", ".png", ".aac", ".ac3", ".avi", ".aiff", ".bat", ".bmp", ".exe", ".flac", ".gif", ".jpeg", ".mov", ".m3u", ".m4p",
-             ".mp2", ".mp3", ".mp4", ".mpeg4", ".midi", ".msi", ".ogg", ".png", ".txt", ".sh", ".wav", ".wma", ".vqf", ".pcap", ".zip",
+fileTypes = [".jpg", ".png", ".aac", ".ac3", ".avi", ".aiff", ".bat", ".bmp", ".exe", ".flac", ".gif", ".jpeg", ".mov",
+             ".m3u", ".m4p",
+             ".mp2", ".mp3", ".mp4", ".mpeg4", ".midi", ".msi", ".ogg", ".png", ".txt", ".sh", ".wav", ".wma", ".vqf",
+             ".pcap", ".zip",
              ".pdf", ".json"]
 
 # Directory path to exclude (e.g., "Cyber Patriot Personnel")
 user = os.getlogin()
-exclude_directory = ["C://Program Files/Cyber Patriot Personnel", "C://Users//"+user+"//Desktop"]
+exclude_directory = ["C://Program Files/Cyber Patriot Personnel", "C://Users//" + user + "//Desktop"]
 
 # Directories to search through
 userDirectories = ["C://Users"]
-safe_folder = "C://Users//"+user+"Desktop//DELETEME"
+safe_folder = "C://Users//" + user + "Desktop//DELETEME"
 
-#mkdir on desktop for files
+# mkdir on desktop for files
 os.mkdir(f"C://Users//{user}/Desktop//DELETEME")
 
 for root_dir in userDirectories:

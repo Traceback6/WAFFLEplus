@@ -1,5 +1,6 @@
 import subprocess
 
+
 def manage_services():
     services_to_disable = [
         "TermService", "SharedAccess", "UmRdpService", "ftpsvc",
@@ -20,6 +21,7 @@ def manage_services():
             print(e)
             print(f"Failed to disable {service}")
     print("Disabled and stopped unnecessary services.")
+
 
 if __name__ == "__main__":
     manage_services()
