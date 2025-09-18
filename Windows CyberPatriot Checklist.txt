@@ -48,7 +48,7 @@ Competition Checklist:
 * Run a quick scan on the machine with either Malware Removal Tool (Malwarebytes) or Windows Security. (either win+r > mrt > Quick Scan or Settings > Update and Security > Windows Security > Quick Scan)
 * Password security (win+r > gpedit.msc > Account Policy > Password Policy) OR
 (win+r > gpedit.msc > Account Policy > Account Lockout Policy)
-        Enforce password history: 24
+   * Enforce password history: 24
    * Maximum password age: 60
    * Minimum password age: 1
    * Minimum password length: 10
@@ -75,9 +75,9 @@ For updating browsers
 
 
 For group policy security settings
-   *Don't display last user name on login screen
-   *Require Ctrl+Alt+Del before signing in
-   *Ty got too lazy to add the rest :/
+   * Don't display last user name on login screen
+   * Require Ctrl+Alt+Del before signing in
+   * Ty got too lazy to add the rest :/
 
 Registry Editor hives explained (if you ever need to use it)
 * HKEY_CURRENT_USER (HKCU) -
@@ -102,4 +102,5 @@ Removing Malware (You will probably only need step 1)
    *Process Explorer(Gives detailed information about running processes(includes virus count))(https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
    *Process Monitor(Gives detailed info about file system, registry, and thread activity)(https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)
    *TCPView(lists all programs on the computer that are connected to a remote computer)(https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)
+
 
