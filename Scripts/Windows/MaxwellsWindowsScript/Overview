@@ -1,0 +1,13 @@
+List of working files:
+1. file_cleaner.py
+2. accountManagment.py
+3. Main.py
+4. firewall_config.py
+5. defender_updates.py
+6. audit_policies.py
+7. service_manaement.py
+8. software_management.py
+
+I don't know about:
+1. password_policies.py
+2. uac_settings.py
