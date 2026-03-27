@@ -1,5 +1,6 @@
 ﻿sudo usermod -a -G examplegroup exampleusername
 
+git clone "https://github.com/traceback6/waffleplus.git"
 
 sudo apt-get install
 sudo ufw enable
